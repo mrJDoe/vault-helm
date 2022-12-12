@@ -45,7 +45,7 @@ injector:
   replicas: 1
 
   # Configures the port the injector should listen on
-  port: 8081
+  port: 8080
 
   # If multiple replicas are specified, by default a leader will be determined
   # so that only one injector attempts to create TLS certificates.
@@ -818,7 +818,7 @@ server:
         cluster_address = "[::]:8201"
       }
       storage "postgresql" {
-        connection_url = "postgres://root:VG123p4usq@172.17.0.83:5432/master_vault?sslmode=disable"
+        connection_url = "postgres://root:VG123p4usq@172.17.0.83:5432/vault?sslmode=disable"
         ha_enabled = true
       }
 
